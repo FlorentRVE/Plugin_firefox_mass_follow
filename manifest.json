@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Extension Firefox Mass Follow",
+  "version": "1.0",
+  "description": "Extension Firefox pour follow tout le monde sur la page 'réseau' de Linkedin",
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_title": "Extension Firefox Mass Follow",
+    "default_icon": "icons/icon32.png",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
